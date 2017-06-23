@@ -1,8 +1,8 @@
 var snmp = require ("net-snmp");
 
-var session;// = snmp.createSession ("10.10.10.73", "netstat");
+var session;// = snmp.createSession ("127.0.0.1", "public");
 
-var oids = []; //["1.3.6.1.4.1.2011.5.25.42.3.1.1.1.1.2.385"];
+var oids = []; //["1.3.6.1.2.1.1.1.0"];
 var result = "";
 var  getOutput = function(ip, community, _oid) {
         session = snmp.createSession (ip, community);
