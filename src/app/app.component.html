@@ -1,0 +1,14 @@
+<h1>
+  {{title}}
+</h1>
+<label>ip:</label><br>
+<input type="text" [(ngModel)]="snmpData.ip"><br>
+<label>community:</label><br>
+<input type="password" [(ngModel)]="snmpData.community" ><br>
+<label>oid:</label><br>
+<input type="text" [(ngModel)]="snmpData.oid"><br>
+<button (click)="submit(snmpData)">Send</button>
+<div *ngIf="done">
+  <div>output from server:</div>
+<p id="out">{{out}}</p>
+</div>
